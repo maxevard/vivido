@@ -18,9 +18,10 @@ import React, { useState, useMemo, useEffect } from "react";
 /* ----------------------------- 1. DONNÉES ----------------------------- */
 
 const ACTIVITIES = [
-  { id: 1, cat: "outdoor", type: "eau", levelKey: "easy", duration: "2–3 h", tone: "water",
+ { id: 1, cat: "outdoor", type: "eau", levelKey: "easy", duration: "2-3 h", tone: "water", prix: "CHF 80",
+    whatsapp: "Bonjour ! Je suis intéressé(e) par l'activité Kayak & paddle sur le lac. Pouvez-vous me donner plus d'infos ?",
     fr: { title: "Kayak & paddle sur le lac", location: "Neuchâtel · rives du lac",
-      desc: "Pagayez sur les eaux turquoise du plus grand lac entièrement suisse, vue sur les Alpes les jours clairs." } },
+    desc: "Pagayez sur les eaux turquoise du plus grand lac entièrement suisse, vue sur les Alpes les jours clairs." } }, 
   { id: 2, cat: "outdoor", type: "rando", levelKey: "hard", duration: "4–5 h", tone: "forest",
     fr: { title: "Randonnée au Creux du Van", location: "Noiraigue · Val-de-Travers",
       desc: "Le grand amphithéâtre rocheux du Jura : 160 m de falaises, bouquetins et panorama sur les trois lacs." } },
@@ -261,6 +262,16 @@ export default function App() {
                       <span><em>{t.duration}</em> {a.duration}</span>
                       <span><em>{t.level}</em> {t.levels[a.levelKey]}</span>
                     </div>
+                    {a.prix && (
+                  <div className="na-card-action">
+                    <span className="na-card-prix">{a.prix}</span>
+                    <a className="na-card-wa"
+                       href={`https://wa.me/41782443543?text=${encodeURIComponent(a.whatsapp || "")}`}
+                       target="_blank" rel="noopener noreferrer">
+                      Réserver via WhatsApp
+                    </a>
+                  </div>
+                )}
                   </div>
                 </article>
               );
@@ -409,6 +420,10 @@ function Styles() {
         font-size:.82rem;}
       .na-card-meta em{font-family:var(--mono); font-style:normal; font-size:.62rem;
         text-transform:uppercase; letter-spacing:.08em; color:var(--muted); display:block;}
+        .na-card-action{display:flex; align-items:center; justify-content:space-between; gap:.8rem; padding:.9rem 1.2rem 1.2rem; border-top:1px solid var(--line);}
+    .na-card-prix{font-family:var(--display); font-weight:700; font-size:1.1rem; color:var(--ink);}
+    .na-card-wa{background:#25D366; color:#fff; font-size:.82rem; font-weight:600; padding:.5rem .9rem; border-radius:999px; white-space:nowrap; transition:transform .15s;}
+    .na-card-wa:hover{transform:translateY(-2px);}
 
       .na-empty{text-align:center; color:var(--muted); padding:3rem 1rem; font-size:1rem;}
 
