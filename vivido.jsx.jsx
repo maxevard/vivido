@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-
+import { ACTIVITIES } from "./activities.js";
 /**
  * VIVIDO — fondation du site d'activités
  * --------------------------------------------------
@@ -17,36 +17,7 @@ import React, { useState, useMemo, useEffect } from "react";
 
 /* ----------------------------- 1. DONNÉES ----------------------------- */
 
-const ACTIVITIES = [
- { id: 1, cat: "outdoor", type: "eau", levelKey: "easy", duration: "2-3 h", tone: "water", prix: "CHF 80",
-    whatsapp: "Bonjour ! Je suis intéressé(e) par l'activité Kayak & paddle sur le lac. Pouvez-vous me donner plus d'infos ?",
-    fr: { title: "Kayak & paddle sur le lac", location: "Neuchâtel · rives du lac",
-    desc: "Pagayez sur les eaux turquoise du plus grand lac entièrement suisse, vue sur les Alpes les jours clairs." } }, 
-  { id: 2, cat: "outdoor", type: "rando", levelKey: "hard", duration: "4–5 h", tone: "forest",
-    fr: { title: "Randonnée au Creux du Van", location: "Noiraigue · Val-de-Travers",
-      desc: "Le grand amphithéâtre rocheux du Jura : 160 m de falaises, bouquetins et panorama sur les trois lacs." } },
-  { id: 3, cat: "outdoor", type: "rando", levelKey: "medium", duration: "3 h", tone: "forest",
-    fr: { title: "Gorges de l'Areuse", location: "Boudry → Noiraigue",
-      desc: "Un sentier le long de la rivière émeraude, entre ponts de pierre, cascades et fraîcheur de la forêt." } },
-  { id: 4, cat: "outdoor", type: "neige", levelKey: "medium", duration: "Journée", tone: "snow",
-    fr: { title: "Ski & raquettes aux Bugnenets", location: "Les Bugnenets-Savagnières",
-      desc: "Pistes familiales et itinéraires raquettes sur les hauteurs du Jura neuchâtelois." } },
-  { id: 5, cat: "outdoor", type: "gastro", levelKey: "easy", duration: "2 h", tone: "vine",
-    fr: { title: "Balade & dégustation dans les vignes", location: "Littoral neuchâtelois",
-      desc: "Marchez entre les rangs de vigne du Littoral et dégustez un Neuchâtel blanc chez le vigneron." } },
-  { id: 6, cat: "indoor", type: "culture", levelKey: "easy", duration: "2 h", tone: "stone",
-    fr: { title: "Laténium, parc & musée d'archéologie", location: "Hauterive",
-      desc: "Le plus grand musée archéologique de Suisse, au bord du lac : 50 000 ans d'histoire à ciel ouvert." } },
-  { id: 7, cat: "indoor", type: "bien", levelKey: "easy", duration: "½ journée", tone: "water",
-    fr: { title: "Spa & bains face au lac", location: "Neuchâtel",
-      desc: "Bassins chauds, sauna et soins pour décompresser après l'effort, le regard posé sur l'eau." } },
-  { id: 8, cat: "indoor", type: "gastro", levelKey: "easy", duration: "3 h", tone: "stone",
-    fr: { title: "Atelier cuisine du terroir", location: "Neuchâtel · table d'hôte",
-      desc: "Mettez la main à la pâte autour des produits locaux, puis passez à table avec le chef." } },
-  { id: 9, cat: "indoor", type: "culture", levelKey: "easy", duration: "1–2 h", tone: "vine",
-    fr: { title: "Maison de l'Absinthe", location: "Môtiers · Val-de-Travers",
-      desc: "L'histoire de la Fée verte là où elle est née — dégustation comprise." } },
-];
+
 
 /* --------------------------- 2. TRADUCTIONS --------------------------- */
 /* "fr" est la langue par défaut. Pour ajouter une langue, copie ce bloc. */
