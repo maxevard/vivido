@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react";
-import { ACTIVITIES } from "./activities.js";
+import { ACTIVITIES } from "./activities.jsx";
 /**
  * VIVIDO — fondation du site d'activités
  * --------------------------------------------------
