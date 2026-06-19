@@ -56,7 +56,7 @@ export const ACTIVITIES = [
 
   { id: 6, slug: "latenium-musee-archeologie",
     cat: "indoor", type: "culture", levelKey: "easy", duration: "2 h",
-    saison: ["printemps", "ete", "automne", "hiver"], tone: "stone", photo: "https://images.unsplash.com/photo-1565060169194-19fabf63012c?w=800&q=80",
+    saison: ["printemps", "ete", "automne", "hiver"], tone: "stone", photo: "https://images.unsplash.com/photo-1554907984-15263bfd63bd?w=800&q=80",
     prix: "Sur demande",
     whatsapp: "Bonjour ! Je souhaite visiter le Laténium. Pouvez-vous m'indiquer les tarifs d'entrée et les horaires actuels ?",
     fr: { title: "Laténium, parc & musée d'archéologie", location: "Hauterive",
