@@ -218,7 +218,11 @@ export default function App() {
               const c = a[lang] ?? a.fr; // contenu localisé si dispo, sinon FR
               return (
                 <article key={a.id} className="na-card" tabIndex={0}>
-                  <CardVisual tone={a.tone} type={a.type} />
+                  {a.photo ? (
+                     <img src={a.photo} alt={c.title} className="na-visual na-visual-photo" />
+                  ) : (
+                    <CardVisual tone={a.tone} type={a.type} />
+                  )}
                   <div className="na-card-body">
                     <div className="na-card-tags">
                       <span className={`na-tag ${a.cat === "outdoor" ? "na-tag-out" : "na-tag-in"}`}>
