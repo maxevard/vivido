@@ -187,7 +187,8 @@ export default function App() {
           <p className="na-eyebrow na-eyebrow-light">{t.heroEyebrow}</p>
           <h1 className="na-hero-title">{t.heroTitle}</h1>
           <p className="na-hero-sub">{t.heroSub}</p>
-          <a href="#activites" className="na-btn na-btn-stone">{t.heroCta}</a>
+          <a href="#activites" className="na-btn na-btn-cta">{t.heroCta}</a>
+                  <div className="na-scroll-hint" aria-hidden="true">&#8964;</div>
         </div>
       </section>
 
@@ -351,6 +352,10 @@ function Styles() {
       .na-btn-stone:hover{background:#c8d9c0;}
       .na-btn-dark{background:var(--lake-deep); color:#fff;}
       .na-btn-dark:hover{background:var(--lake);}
+      .na-btn-cta{background:#fff; color:var(--lake-deep);}
+      .na-btn-cta:hover{background:var(--stone);}
+        .na-scroll-hint{position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,.5); font-size:1.6rem; animation:bounce 1.8s ease-in-out infinite; cursor:default; user-select:none;}
+        @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(7px);}}
 
       /* Main + filtres */
       .na-main{max-width:1180px; margin:0 auto; padding:clamp(2.5rem,5vw,4rem) clamp(1rem,4vw,3rem);}
@@ -371,6 +376,8 @@ function Styles() {
         display:flex; flex-direction:column; transition:transform .2s, box-shadow .2s;}
       .na-card:hover, .na-card:focus-visible{transform:translateY(-4px);
         box-shadow:0 18px 40px -22px rgba(15,76,92,.55);}
+        .na-card:hover .na-visual-photo img{transform:scale(1.06);}
+        .na-visual-photo img{transition:transform .35s ease;}
 
       .na-visual{position:relative; height:148px; overflow:hidden;}
       .na-visual-contours{position:absolute; inset:0; width:100%; height:100%;
@@ -402,7 +409,7 @@ function Styles() {
         text-transform:uppercase; letter-spacing:.08em; color:var(--muted); display:block;}
         .na-card-action{display:flex; align-items:center; justify-content:space-between; gap:.8rem; padding:.9rem 1.2rem 1.2rem; border-top:1px solid var(--line);}
     .na-card-prix{font-family:var(--display); font-weight:700; font-size:1.1rem; color:var(--ink);}
-    .na-card-wa{background:#25D366; color:#fff; font-size:.82rem; font-weight:600; padding:.5rem .9rem; border-radius:999px; white-space:nowrap; transition:transform .15s;}
+    .na-card-wa{background:#E8A53C; color:var(--lake-deep); font-size:.82rem; font-weight:600; padding:.5rem .9rem; border-radius:999
     .na-card-wa:hover{transform:translateY(-2px);}
 
       .na-empty{text-align:center; color:var(--muted); padding:3rem 1rem; font-size:1rem;}
