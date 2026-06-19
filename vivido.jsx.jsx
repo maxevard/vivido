@@ -262,7 +262,7 @@ export default function App() {
           <p className="na-eyebrow">{t.partnerEyebrow}</p>
           <h2 className="na-partner-title">{t.partnerTitle}</h2>
           <p className="na-partner-sub">{t.partnerSub}</p>
-          <a href="#" className="na-btn na-btn-dark">{t.partnerCta}</a>
+          <a href="https://wa.me/41782443543?text=Bonjour%20!%20Je%20souhaite%20proposer%20une%20activit%C3%A9%20sur%20Vivido.%20Pouvez-vous%20me%20contacter%20%3F" className="na-btn na-btn-dark">{t.partnerCta}</a>
         </div>
       </section>
 
