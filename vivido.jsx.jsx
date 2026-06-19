@@ -269,6 +269,11 @@ export default function App() {
       <footer className="na-footer">
         <span className="na-brand"><span className="na-brand-mark">▲</span> VIVIDO</span>
         <span className="na-footer-tag">{t.footer}</span>
+      <div className="na-footer-links">
+            <a href="/impressum.html" className="na-footer-link">Mentions légales</a>
+            <a href="/privacy.html" className="na-footer-link">Confidentialité</a>
+            <a href="/cgu.html" className="na-footer-link">CGU</a>
+          </div>
       </footer>
     </div>
   );
@@ -414,6 +419,9 @@ function Styles() {
         flex-wrap:wrap; padding:1.6rem clamp(1rem,4vw,3rem); border-top:1px solid var(--line);
         background:var(--paper);}
       .na-footer-tag{font-size:.85rem; color:var(--muted);}
+      .na-footer-links{display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; width:100%; margin-top:.4rem;}
+.na-footer-link{font-size:.8rem; color:var(--muted); text-decoration:none; opacity:.8;}
+.na-footer-link:hover{opacity:1; text-decoration:underline;}
 
       @media (max-width:560px){
         .na-nav{gap:.7rem;}
